@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.page.html',
+  styleUrls: ['./menu.page.scss'],
 })
-
-export class TabsPage implements OnInit {
+export class MenuPage implements OnInit {
 
   activePath = '';
   pages = [
@@ -25,7 +24,7 @@ export class TabsPage implements OnInit {
     },
     {
       name: 'Home',
-      path: '/tabs'
+      path: './home'
     }
 ];
  constructor(private router: Router) {
@@ -38,4 +37,3 @@ export class TabsPage implements OnInit {
   }
 
 }
-

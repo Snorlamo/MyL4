@@ -18,22 +18,32 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'login',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../login/login.module').then(m => m.LoginPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'contact',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../contact/contact.module').then(m => m.ContactPageModule)
+          }
+        ]
+      },
+      {
+        path: 'register',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../register/register.module').then(m => m.RegisterPageModule)
           }
         ]
       },

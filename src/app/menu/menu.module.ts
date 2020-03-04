@@ -1,16 +1,15 @@
-import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { TabsPageRoutingModule } from './tabs-routing.module';
+import { IonicModule } from '@ionic/angular';
 
-import { TabsPage } from './tabs.page';
+import { MenuPage } from './menu.page';
 
 const routes: Routes = [
   {
   path: 'menu',
-  component: TabsPage,
+  component: MenuPage,
   children: [
   {
   path: 'home',
@@ -38,12 +37,11 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule,
+    IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [TabsPage]
+  declarations: [MenuPage]
 })
-export class TabsPageModule {}
+export class MenuPageModule {}
